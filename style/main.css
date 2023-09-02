@@ -1,0 +1,1438 @@
+ :root{
+    /* font-family: "Jost", Sans-serif;
+    color: #292929;
+    --e-global-color-primary: #292929;
+    --e-global-color-secondary: #F5F5F5;
+    --e-global-color-text: #7A7A7A;
+    --e-global-color-accent: #D1BC92;
+    color: #7A7A7A;
+    background-color: #292929 */
+    --fontcolor: #292929;
+ }
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+    width: 0.5em;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    /* outline: 1px solid slategrey; */
+  }
+
+  /* .............................. */
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: "Jost", Sans-serif;
+    -webkit-tap-highlight-color: #212529;
+}
+/* ..................................... */
+
+
+#navlift{
+    display: none;
+}
+#navlift .backgnavlift{
+    width: 31rem;
+    height: 100vh;
+    position: fixed;
+    z-index: 20;
+    background-color: #292929;
+    color: white;
+    text-align: center;
+    overflow: auto;
+   
+}
+#navlift .info_nav_lift{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+}
+.info_nav_lift h2{
+    margin-top: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    padding:1rem 0;
+}
+.info_nav_lift p{
+    font-size: 1.2rem;
+    color: #7a7a7a;
+}
+.info_nav_lift .img_nav_lift{
+    display: flex;
+    padding: 2rem 0;
+}
+.contact_nav_lift ul{
+   margin-top: 2rem;
+}
+.contact_nav_lift ul li{
+    list-style: none;
+    font-size: 1.2rem;
+    padding: 0.3rem 0;
+}
+.contact_nav_lift ul li a{
+    text-decoration: none;
+   color: white; 
+    padding: 0 0.5rem;
+}
+.contact_nav_lift ul li .in{
+    font-size: 1rem;
+}
+.contact_nav_lift .iconic{
+    display: flex;
+    padding: 1.2rem 0;
+    justify-content: center;
+}
+.contact_nav_lift .inf{
+    color: #292929;
+    background-color:white;
+}
+.contact_nav_lift .inf:hover{
+    padding: 0.2rem;
+    height: 0.9rem;
+    width: 0.9rem;
+}
+#exitlift{
+    display: flex;
+    width: 100%;
+    padding: 2rem 3rem;
+    flex-direction: column;
+    align-items: flex-start;
+ }
+ .exitlift .xright{
+    transform: rotate(312deg);
+ }
+ .exitlift .xlift{
+    transform: rotate(50deg);
+ }
+ .exitlift div{
+    width: 2rem;
+    height: 0.2rem;
+    background-color: white;
+ }
+   /* .................... */
+   .backgnavlift::-webkit-scrollbar {
+    width: 0.5em;
+  }
+   
+  .backgnavlift::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  .backgnavlift::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    /* outline: 1px solid slategrey; */
+  }
+
+
+/* .............................................. */
+#navright{
+    display: flex;
+   justify-content: flex-end;
+   display: none; 
+}
+.backgnav{
+   width: 31rem;
+   height: 100vh;
+   background-color:white;
+   position: fixed;
+   z-index: 10;
+   
+}
+#exit{
+   display: flex;
+   width: 100%;
+   padding: 4rem 3rem;
+   flex-direction: column;
+   align-items: flex-end;
+}
+.exst .xright{
+   transform: rotate(312deg);
+}
+.exst .xlift{
+   transform: rotate(50deg);
+}
+.exst div{
+   width: 2rem;
+   height: 0.2rem;
+   background-color: black;
+}
+.info_nav{
+   display: flex;
+   /* padding: 5rem; */
+   align-items: center;
+   padding: 3rem;
+}
+.info_nav div{
+   padding: 0 1rem;
+}
+.info_nav div img{
+   width: 10rem;
+}
+.SUBTOTAL{
+   text-align: center;
+   padding: 0 3rem ;
+}
+.SUBTOTAL h3{
+ font-size: 2rem;
+}
+.SUBTOTAL h3 span{
+   font-size: 1.9rem ;
+   font-weight:200;
+}
+.btn_checkout{
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+.backgnav .btncheck{
+   background-color: #69727d;
+   color: white;
+   padding: 1rem;
+   outline: 0;
+}
+.backgnav  .btncheck a{
+   text-decoration: none;
+   color: white;
+   padding:0 2rem;
+}
+.backgnav  .btncheck:hover{
+   background-color: white;
+   color: #292929;
+}
+.backgnav  .btncheck:hover >a{
+   color: #292929;
+}
+
+
+
+/* ............................................... */
+#TopBar {
+    background-color: #292929;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: white;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+
+}
+
+#TopBar div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#TopBar p {
+    margin: 0;
+}
+
+ .ic {
+    margin-left: 1rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: white;
+    color: #292929;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: ease all 400ms;
+}
+
+#TopBar .IconsDiv .ic:hover {
+    padding: 0.2rem;
+    height: 0.9rem;
+    width: 0.9rem;
+}
+/* .............................hedar */
+#MainHeader {
+    padding: 2rem 10%;
+    background-color: white;
+    color: #292929;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    color: #7a7a7a;
+}
+
+#MainHeader ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#MainHeader p {
+    margin: 0;
+}
+
+#AppLogo {
+    height: 1.4rem;
+}
+
+#MainHeader ul li {
+    margin: 0 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.9rem;
+
+}
+#MainHeader ul li a{
+    text-decoration: none;
+    color: #7a7a7a;
+}
+
+.Link {
+    cursor: pointer;
+}
+.Link:hover{
+    border-bottom: 0.1rem solid black;
+}
+.hr_li{
+     border-bottom: 0.1rem solid black;
+}
+#CartDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#CartDiv p {
+    margin-right: 1rem;
+}
+
+/* ..........................lading */
+#LandingSection {
+    background-color: #f5f5f5;
+    height: 100vh;
+    display: flex;
+    padding: 0 10%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+#LeftDiv h1 {
+    font-size: 51px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    letter-spacing: 1.5px;
+}
+
+#LeftDiv p {
+    color: #7A7A7A;
+    font-family: "Heebo", Sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#LeftDiv button {
+    font-family: "Jost", Sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    fill: #FFFFFF;
+    color: #FFFFFF;
+    background-color: #292929;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #292929;
+    border-radius: 0px 0px 0px 0px;
+    padding: 20px 40px 20px 40px;
+}
+#LeftDiv button:hover{ 
+    border-color: #292929;
+    background-color: #f5f5f5;
+    
+}
+#LeftDiv button a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+#LeftDiv button:hover>a {
+    color: #292929;
+}
+#RightDiv {
+    height: 38rem;
+    width: 38rem;
+    border-radius: 50%;
+    background-color: #ece8e0;
+    position: absolute;
+    right: 3rem;
+    top: -2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#__TheChair {
+    height: 25rem;
+    transform: translate(0rem, 7rem);
+    transition: ease all 400ms;
+}
+
+#__TheLamp {
+    height: 35rem;
+    transform: translate(-4rem, 1rem);
+    transition: ease all 400ms;
+}
+/* ..................... */
+#NEW_ARRIVALS{
+    width: 100%;
+    /* height: 50vh; */
+    background-color: white;
+    padding: 2rem 0;
+}
+.cardsARRIVALS{
+    display: flex;
+    background-color: white;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem;
+    margin-top: -6rem;
+    /* margin-bottom: -45rem; */
+    /* position: absolute; */
+    z-index: 3;
+    
+}
+.card_WOODEN{
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #f5f5f5;
+    text-align: center;
+    align-items: flex-start;
+    position: relative;
+    border:  solid 1rem white;
+    color: #7A7A7A;
+    
+}
+.card_WOODEN img{
+    transform: translate(6rem, -3rem);
+    width: 16rem;
+}
+.card_WOODEN div{
+    position: absolute;
+    top: 0;
+    padding: 2.5rem;
+}
+.card_WOODEN p{
+    font-size: 1rem;
+    color: #D1BC92;
+    font-weight: 400;
+}
+.card_WOODEN h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.card_WOODEN a{
+    text-decoration: none;
+    color: #7A7A7A;
+    font-size: 1.2rem;
+}
+/* ...............................BEST_SELLING */
+#BEST_SELLING{
+    width: 100%;
+   min-height: 50vh;
+   padding: 5rem 0;
+}
+.BEST_SELLING{
+    width: 100%;
+    padding: 0 4rem;
+}
+.hr_span{
+    display: flex;
+    padding: 5rem 0;
+}
+.hr_span span{
+    width: 100%;
+}
+.hr_span span h2{
+    font-weight: 700;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cards_BEST_SELLING{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 1rem 0;
+
+}
+.card_TABLE{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 20rem;
+   
+}
+.card_TABLE img{
+    max-width: 100%;
+}
+.card_TABLE h2{
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 0;
+    color: #292929;
+}
+.card_TABLE a{
+    color: #7A7A7A;
+    text-decoration: none;
+    border-bottom: solid 1px #7a7a7a;
+}
+/* .......................happy */
+#HAPPY_FRIDAY{
+    width: 100%;
+    min-height: 50vh;
+    padding: 2rem;
+}
+.HAPPY_FRIDAY{
+   
+    display: flex;
+}
+#HAPPY{
+     width: 100%;
+    height: 100%;
+  padding: 0 1rem;
+
+}
+.background_happy{
+    background-color: #F5F5F5;
+    background-image: url(../img/happynew.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;  
+      padding: 5rem 0;
+}
+.background_happy div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0rem 1rem;
+}
+.background_happy div p{
+    font-size: 1rem;
+    color: #D1BC92;
+}
+.background_happy div h2{
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+}
+.background_happy div a{
+    text-decoration: none;
+    color: black;
+}
+
+#flash{
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+   
+}
+.background_flash{
+     background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 5rem 0;
+    background-image: url(../img/flash.png);
+    background-color: #F5F5F5;
+}
+.background_flash div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0rem 1rem;
+}
+.background_flash div p{
+    font-size: 1rem;
+    color: #D1BC92;
+}
+.background_flash div h2{
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+}
+.background_flash div a{
+    text-decoration: none;
+    color: black;
+}
+/* ........................................... */
+
+.sale{
+    position: absolute;
+    display: block;
+    background-color: #D1BC92;
+    font-family: "Jost", Sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    min-width: 3.1rem;
+    min-height: 3.1rem;
+    line-height: 3.1rem;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    z-index: 9;
+    transform: translate(9rem,-13rem);
+}
+/* ................................lamp_taple */
+#LAMPTAPLE{
+    width: 100%;
+   
+    padding: 2REM 0;
+}
+.LAMP_TAPLE{
+    padding: 0 4rem;
+    width: 100%;
+}
+.all_cards_lamp{
+    display: flex; 
+    
+}
+.cards_lamp{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+}
+.cards_lamp .img_lamp img{
+    max-height: 100%;
+    max-width: 100%;
+}
+.text_lamp{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lamp{
+    border-right: 1rem solid white;
+       height: 70vh;
+       background-color: #F5F5F5;
+}
+.cards2{
+    border-left: solid 1rem white;
+}
+
+.DRESSER{
+    border-bottom: solid 1rem white;
+    height: 35vh;
+    background-color: #F5F5F5;
+    padding: 1rem 0;
+}
+.chair_sofa{
+    border-top: solid 1rem white;
+  height: 35vh;
+  background-color: #F5F5F5;
+}
+.text_lamp h2{
+    font-size: 1.5rem;
+    color: #292929;
+}
+.text_lamp p{
+    font-size: 1.1rem;
+    color: #7A7A7A;
+}
+.text_lamp a{
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #292929;
+}
+.text_lamp a span .il{
+    font-size: 0.9rem;
+    color: #292929;
+    padding: 0 0.5rem;
+}
+/* .........................TESTIMONIALS */
+#TESTIMONIALS{
+    width: 100%;
+    min-height: 50vh;
+    padding: 2rem 0;
+}
+.TESTIMONIALS{
+    padding: 0 4rem;
+}
+.info_tem{
+    height: 50vh;
+    background-color: #F5F5F5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+}
+.img_ceo img{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+.info_tem p{
+    font-size: 1.1rem;
+    color: #7A7A7A;
+    margin: 0;
+    padding: 0 1rem;
+}
+.info_tem h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+.icontchevron{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+/* ..............................LATEST BLOGS */
+#LATESTBLOGS{
+    width: 100%;
+
+}
+.LATEST_BLOGS{
+    padding: 0 4rem;
+}
+.all_cards_latesblog{
+    display: flex;
+}
+.cards_latesblog{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-between;
+}
+.text_latesblogs{
+    padding: 1rem;
+}
+.text_latesblogs h3{
+    font-size: 1.4rem;
+    color: #292929;
+}
+.text_latesblogs span{
+     color: #D1BC92;
+}
+.text_latesblogs p{
+    color: #7A7A7A; 
+}
+.text_latesblogs a{
+    text-decoration: none;
+    color: #292929;
+}
+.FREE_SHIPPING{
+    display: flex;
+}
+.PAYMENT{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.shoping_and_mony{
+    display: flex;
+    padding: 2rem 0;
+}
+.FREE_SHIPPING .if{
+    font-size: 2.1rem;
+    padding: 0 0.5rem;
+}
+.FREE_SHIPPING .textfreeshiping h3{
+    font-size: 1.2rem;
+}
+.FREE_SHIPPING .textfreeshiping p{
+    font-size: 1rem;
+    color: #7A7A7A; 
+}
+/* ........................INFORMATION */
+#INFORMATION{
+    width: 100%;
+
+}
+
+.background_INFORMATION{
+    background-color: #F5F5F5;
+    padding: 3rem 5rem;
+    display: flex;
+}
+.info_conect{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: flex-start;
+}
+.info_conect h3{
+    font-size: 1rem;
+}
+.hr{
+    width: 25%;
+    height: 0.1rem;
+    background-color: #292929;
+}
+.info_conect ul{
+    padding: 1rem 0;
+}
+.info_conect ul li{
+    list-style: none;
+    font-size: 1rem;
+    padding: 0.3rem 0;
+}
+.info_conect ul li a{
+    text-decoration: none;
+    color: #7A7A7A; 
+    padding: 0 0.5rem;
+}
+.info_conect ul li .in{
+    font-size: 1rem;
+}
+.info_conect .iconic{
+    display: flex;
+    padding: 1rem 0;
+}
+.inf{
+    color: white;
+    background-color: #292929;
+}
+.inf:hover{
+    padding: 0.2rem;
+    height: 0.9rem;
+    width: 0.9rem;
+}
+/* ..................footer */
+footer{
+    width: 100%;
+        
+}
+.background_footer{
+    background-color: #F5F5F5;
+    padding: 3rem 5rem;
+   
+}
+.info_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info_footer span {
+    padding: 0 1rem;
+    font-size: 1rem;
+}
+.info_footer span a{
+    text-decoration: none;
+    color: #292929;
+    font-size: 1rem;
+    padding:  0.3rem;
+}
+.text_footer{
+    display: flex;
+}
+
+
+@media screen and (max-width: 575px){
+   
+    #RightDiv {
+        background-color: transparent;
+        top: 10rem;
+        /* height: 12rem; */
+        width: 13rem;
+        right: 2rem;
+    }
+
+    #LeftDiv h1 {
+        font-size: 24px;
+    }
+
+    #LandingSection {
+        min-height: 50vh;
+        padding: 4rem 5%;
+        overflow: hidden;
+    }
+    #CartDiv {
+        display: none;
+    }
+
+    #MainHeader {
+        padding: 2rem 2%;
+    }
+
+    #AppLogo {
+        height: 2rem;
+    }
+    #__TheLamp {
+        display: none;
+    }
+/* ............... */
+    .cardsARRIVALS{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    #NEW_ARRIVALS{
+        padding:5rem 0 ;
+    }
+  
+    .card_WOODEN img{
+        transform: translate(2rem, -2rem);
+        width: 14rem;
+    }
+    
+    .card_WOODEN div{
+        padding: 3em;
+    }
+    /* ....................... */
+    .BEST_SELLING{
+       
+       padding: 2rem 0;
+    }
+    .hr_span span{
+        width: 100%;
+    }
+    .hr_span span h2{
+        font-weight: 100;
+        font-size: 1rem;
+    
+    }
+    #cards_BEST_SELLING{
+        display: flex;
+    flex-wrap: wrap;
+
+    }
+    .card_TABLE{
+        padding: 1rem 0;
+    }
+    /* ....................... */
+    .HAPPY_FRIDAY{
+   
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #HAPPY{
+        padding: 1rem;
+    }
+    .background_happy{
+        background-image: none;
+        padding:1rem;
+    }
+    .background_happy div{
+        display: flex;
+        padding: 1rem 0;
+        align-items: center;
+}
+.background_happy div h2{
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    padding: 1rem 0;
+}
+.background_happy div a{
+    font-size: 0.5rem;
+}
+#flash{
+    padding: 1rem;
+}
+.background_flash{
+    background-image: none;
+    padding:1rem;
+}
+.background_flash div{
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+}
+.background_flash div h2{
+font-size: 1.5rem;
+letter-spacing: 0.2rem;
+padding: 1rem 0;
+}
+.background_flash div a{
+font-size: 0.5rem;
+}
+/* ................. */
+/* .sale{
+    margin-left: 67%;
+    margin-bottom: 95%;
+} */
+/* ........................lamp */
+.all_cards_lamp{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cards_lamp{
+  padding: 1rem;
+}
+.lamp{
+ border-bottom: 1rem solid white;
+ border-right: none;
+ height: 50vh;
+}
+.cards2{
+    border: none;
+}
+.DRESSER{
+    border-top: 1rem solid white;
+}
+.cards_lamp .img_lamp img{
+    transform: translate(6rem,4rem);
+}
+.text_lamp{
+    transform: translate(-5rem,0rem);
+}
+
+/* ........................... */
+.info_tem p{
+    font-size: 0.9rem;
+    padding: 0 1rem;
+}
+.info_tem p br{
+    display: none;
+}
+/* .............. */
+.icontchevron{
+    display: none;
+}
+/* ................... */
+.all_cards_latesblog{
+    display: flex;
+    flex-wrap: wrap;
+}
+.PAYMENT{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* ............... */
+.info_footer{
+    display: flex;
+}
+.text_footer{
+    display: flex;
+}
+.background_footer{
+    padding: 3rem 2rem;
+}
+
+
+}
+@media screen and (min-width: 575px) and (max-width: 767px) {
+    #CartDiv {
+        display: none;
+    }
+
+    #MainHeader {
+        padding: 2rem 2%;
+    }
+
+    #AppLogo {
+        height: 2rem;
+    }
+    /* .......................... */
+    .cardsARRIVALS{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    #NEW_ARRIVALS{
+        padding:5rem 0 ;
+    }
+    .card_WOODEN {
+        margin-top: 5rem;
+    }
+   
+ 
+    .card_WOODEN img{
+        transform: translate(13rem, -7rem);
+        width: 15rem;
+    }
+    .card_WOODEN div{
+        padding: 7rem;
+    }
+     /* ....................... */
+     .BEST_SELLING{
+       
+        padding: 2rem 0;
+     }
+     .hr_span span{
+         width: 100%;
+     }
+     .hr_span span h2{
+         font-weight: 700;
+         font-size: 1.5rem;
+     
+     }
+     #cards_BEST_SELLING{
+         display: flex;
+     flex-wrap: wrap;
+ 
+     }
+     .card_TABLE{
+         padding: 1rem 0;
+     }
+         /* ....................... */
+    .HAPPY_FRIDAY{
+   
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #HAPPY{
+        padding: 1rem;
+    }
+    .background_happy{
+        background-image: none;
+        padding:1rem;
+    }
+    .background_happy div{
+        display: flex;
+        padding: 1rem 0;
+        align-items: center;
+}
+.background_happy div h2{
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    padding: 1rem 0;
+}
+.background_happy div a{
+    font-size: 0.5rem;
+}
+#flash{
+    padding: 1rem;
+}
+.background_flash{
+    background-image: none;
+    padding:1rem;
+}
+.background_flash div{
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+}
+.background_flash div h2{
+font-size: 1.5rem;
+letter-spacing: 0.2rem;
+padding: 1rem 0;
+}
+.background_flash div a{
+font-size: 0.5rem;
+}
+/* ........................... */
+.all_cards_lamp{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cards_lamp{
+  padding: 1rem;
+}
+.lamp{
+ border-bottom: 1rem solid white;
+ border-right: none;
+ height: 50vh;
+}
+.cards2{
+    border: none;
+}
+.DRESSER{
+    border-top: 1rem solid white;
+}
+/* ............... */
+.icontchevron{
+    display: none;
+}
+/* ................... */
+.all_cards_latesblog{
+    display: flex;
+    flex-wrap: wrap;
+}
+.PAYMENT{
+    display: flex;
+    flex-wrap: wrap;
+}
+}
+
+@media screen and (max-width: 992px) {
+    .Link {
+        display: none;
+    }
+
+    #TopBar {
+        display: none;
+    }
+    /* .................................. */
+    .HAPPY_FRIDAY{
+   
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #HAPPY{
+        padding: 1rem 0;
+    }
+    .background_happy{
+        background-size: contain;
+        background-position: center right;
+    }
+    #flash{
+        padding: 1rem 0;
+    }
+    .background_flash{
+        background-size: contain;
+        background-position: center right;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1100px) {
+   html{
+    font-size: 14px;
+   }
+    #LandingSection {
+        padding: 0 2%;
+    }
+
+    #RightDiv {
+        height: 20rem;
+        width: 20rem;
+        top: 5rem;
+    }
+
+    #__TheChair {
+        height: 20rem;
+        transform: translate(0rem, 7rem);
+        transition: ease all 400ms;
+    }
+
+    #__TheLamp {
+        height: 30rem;
+        transform: translate(-4rem, 1rem);
+        transition: ease all 300ms;
+    }
+    /* ................... */
+    .cardsARRIVALS{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    .card_WOODEN img{
+        transform: translate(31rem, -3rem);
+    }
+     /* .................................. */
+     .HAPPY_FRIDAY{
+   
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #HAPPY{
+        padding: 1rem 0;
+    }
+    .background_happy{
+        background-size: contain;
+        background-position: center right;
+    }
+    #flash{
+        padding: 1rem 0;
+    }
+    .background_flash{
+        background-size: contain;
+        background-position: center right;
+    }
+    .sale{
+        transform: translate(6rem,-10rem);
+    }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
+   html{
+    font-size: 15px;
+   }
+    #RightDiv {
+        height: 25rem;
+        width: 25rem;
+        top: 5rem;
+        padding: auto;
+    }
+
+    #__TheChair {
+        height: 20rem;
+        transform: translate(0rem, 7rem);
+        transition: ease all 400ms;
+    }
+
+    #__TheLamp {
+        height: 30rem;
+        transform: translate(-4rem, 1rem);
+        transition: ease all 400ms;
+    }
+       /* ................... */
+   
+   
+ 
+    
+       .card_WOODEN img{
+        transform: translate(3rem, -2rem);
+    }
+     /* .................................. */
+     .HAPPY_FRIDAY{
+   
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #HAPPY{
+        padding: 1rem 0;
+    }
+    .background_happy{
+        background-size: contain;
+        background-position: center right;
+    }
+    #flash{
+        padding: 1rem 0;
+    }
+    .background_flash{
+        background-size: contain;
+        background-position: center right;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px) {
+ html{
+    font-size: 13px;
+ }
+    #LandingSection {
+        padding: 0 2%;
+    }
+
+    #LeftDiv h1 {
+        font-size: 30px;
+    }
+
+    #LeftDiv p {
+        font-size: 12px;
+    }
+
+    #RightDiv {
+        height: 20rem;
+        width: 20rem;
+        top: 5rem;
+    }
+
+    #__TheChair {
+        height: 20rem;
+        transform: translate(0rem, 7rem);
+        transition: ease all 400ms;
+    }
+
+    #__TheLamp {
+        height: 30rem;
+        transform: translate(-4rem, 1rem);
+        transition: ease all 400ms;
+    }
+    /* ....................... */
+   
+    .cardsARRIVALS{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+   
+ 
+    .card_WOODEN img{
+        transform: translate(20rem, -3rem);
+    }
+    .sale{
+        transform: translate(5rem,-9rem);
+    }
+    .icontchevron{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+   
+ 
+   
+    #RightDiv {
+        background-color: transparent;
+        top: 24rem;
+        height: 12rem;
+        width: 13rem;
+        right: 2rem;
+    }
+
+    #LeftDiv h1 {
+        font-size:1.7rem;
+    }
+
+    #LandingSection {
+        min-height: 50vh;
+        padding: 4rem 5%;
+        overflow: hidden;
+    }
+
+    #__TheChair {
+        height: 18rem;
+    }
+
+  
+    /* ................... */
+    .background_INFORMATION{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .info_footer {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 5rem;
+    justify-content: space-around;
+    }
+}
+ 
